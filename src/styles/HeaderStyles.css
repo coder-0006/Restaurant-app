@@ -22,3 +22,6 @@
     font-size: 1.4rem;
     color: black;
 }
+.active{
+    color: goldenrod !important;
+}

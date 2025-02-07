@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../../images/logo.svg'
 import { AppBar, Box, Divider, Drawer, IconButton, Toolbar, Typography } from '@mui/material'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../../styles/HeaderStyles.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
@@ -38,10 +38,10 @@ const Header = () => {
             </Typography>
             <Box sx={{display: {xs:'none', sm:'block'}}}>
               <ul className='navigation-menu'>
-                <li><Link to={'/'}>Home</Link></li>
-                <li><Link to={'/menu'}>Menu</Link></li>
-                <li><Link to={'/about'}>About</Link></li>
-                <li><Link to={'/contact'}>Contact</Link></li>
+                <li><NavLink activeClassName='active' to={'/'}>Home</NavLink></li>
+                <li><NavLink activeClassName='active' to={'/menu'}>Menu</NavLink></li>
+                <li><NavLink activeClassName='active' to={'/about'}>About</NavLink></li>
+                <li><NavLink activeClassName='active' to={'/contact'}>Contact</NavLink></li>
               </ul>
             </Box>
           </Toolbar>
